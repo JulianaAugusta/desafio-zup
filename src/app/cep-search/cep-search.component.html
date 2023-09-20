@@ -1,0 +1,19 @@
+<div class="container-pesquisa-cep">
+  <form class="example-form">
+    <mat-form-field class="container-pesquisa-cep_input">
+      <mat-label for="cepInput">Digite o CEP</mat-label>
+      <input matInput id="cepInput" [(ngModel)]="cep" (input)="onCepInputChange($event)" name="cep" placeholder="digite o cep" >
+    </mat-form-field>
+  </form>
+  <!-- <button mat-flat-button class="container-pesquisa-cep_button" color="primary" (click)="searchCEP()">Buscar</button> -->
+</div>
+
+<div *ngIf="cepInfo">
+  <h2>Informações do CEP:</h2>
+  <p><strong>CEP:</strong> {{ cepInfo.cep }}</p>
+  <p><strong>Logradouro:</strong> {{ cepInfo.logradouro }}</p>
+  <p><strong>Bairro:</strong> {{ cepInfo.bairro }}</p>
+  <p><strong>Cidade:</strong> {{ cepInfo.localidade }}</p>
+  <p><strong>Estado:</strong> {{ cepInfo.uf }}</p>
+</div>
+

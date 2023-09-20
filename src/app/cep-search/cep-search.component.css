@@ -1,0 +1,11 @@
+.container-pesquisa-cep{
+  display: flex;
+}
+
+.container-pesquisa-cep_input{
+  margin-right: 2rem;
+}
+
+.container-pesquisa-cep_button{
+  margin-top: 1rem;
+}
