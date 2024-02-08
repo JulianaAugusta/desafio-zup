@@ -1,8 +1,10 @@
 <h2>Entre em Contato</h2>
 <p>Escolha uma opção para que possamos entrar em contato com você:</p>
 
-<button mat-button (click)="selectContactOption('telefone')">Telefone</button>
-<button mat-button (click)="selectContactOption('email')">E-mail</button>
+<mat-radio-group class="user-input" aria-label="Select an option">
+  <mat-radio-button (click)="selectContactOption('telefone')" value="1">telefone</mat-radio-button>
+  <mat-radio-button (click)="selectContactOption('email')"value="2">e-mail</mat-radio-button>
+</mat-radio-group>
 
 <form [formGroup]="contactForm">
   <div *ngIf="selectedOption === 'telefone'">

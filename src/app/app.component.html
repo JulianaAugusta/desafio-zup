@@ -1,6 +1,10 @@
 <!-- <app-cep-search></app-cep-search> -->
 
-<div *ngFor="let item of cardList">
-  <app-card [title]="item.title" [description]="item.description" (moreClicked)="onMoreClicked(item)"></app-card>
+<h2>Lista de Cards</h2>
+<div class="container-card">
+  <div class="test" *ngFor="let item of cardList">
+    <app-card class="mat-card_little" [title]="item.title" [description]="item.description" (moreClicked)="onMoreClicked(item)"></app-card>
+  </div>
 </div>
+
 

@@ -15,9 +15,8 @@ import { CardComponent } from './card/card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
-
-
-
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,9 @@ import { SuccessDialogComponent } from './success-dialog/success-dialog.componen
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
