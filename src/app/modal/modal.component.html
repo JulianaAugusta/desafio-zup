@@ -1,0 +1,24 @@
+<h2>Entre em Contato</h2>
+<p>Escolha uma opção para que possamos entrar em contato com você:</p>
+
+<button mat-button (click)="selectContactOption('telefone')">Telefone</button>
+<button mat-button (click)="selectContactOption('email')">E-mail</button>
+
+<form [formGroup]="contactForm">
+  <div *ngIf="selectedOption === 'telefone'">
+    <mat-form-field>
+      <input matInput placeholder="Telefone" formControlName="phoneNumber">
+    </mat-form-field>
+  </div>
+  <div *ngIf="selectedOption === 'email'">
+    <mat-form-field>
+      <input matInput placeholder="E-mail" formControlName="email">
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button mat-button (click)="closeModal()">Voltar</button>
+    <button mat-button (click)="contact()" [disabled]="!contactForm.valid || !contactForm.touched">Solicitar Contato</button>
+  </div>
+</form>
+
